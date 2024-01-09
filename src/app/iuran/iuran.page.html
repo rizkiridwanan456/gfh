@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title class="nama_apk">Greenland</ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      
+      <ion-button  (click)="logout()">
+        <ion-icon name="log-in-outline" style="color: rgba(6, 167, 73, 0.644); font-size: 27px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content  [fullscreen]="true">
+  
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-button routerLink="/t-iuran" expand="block" color="success">Tambah Data+</ion-button>
+  <ion-card class="form" *ngFor="let data of infoData">
+    <ion-card-content>
+      <h4 class="nik">Kode Penduduk : {{ data.kd_penduduk }}</h4>
+      <h4>Jenis Pembayaran : {{ data.jenis_pembayaran }}</h4>
+      <h4>Tahun Pembayaran : {{ data.kas_tahun }}</h4>
+      <h4>Keterangan : {{ data.keterangan }}</h4>
+      <h4>Status : {{ data.status }}</h4>
+      <ion-button fill="clear" color="success" (click)="edit(data.kd_iuran)"><i class="bi bi-pencil-square"></i>Update</ion-button>
+    <ion-button fill="clear" color="danger" (click)="confirmDelete(data.kd_iuran)"><ion-icon name="trash-outline"></ion-icon>Delete</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

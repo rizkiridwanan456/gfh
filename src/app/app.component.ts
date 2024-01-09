@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonMenu } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,13 +10,37 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Penduduk', url: '/penduduk', icon: 'person-add' },
+    { title: 'Info', url: '/info', icon: 'information' },
+    { title: 'Iuran', url: '/iuran', icon: 'cash' },
+    { title: 'Blok', url: '/blok', icon: 'home' },
+    { title: 'Pesan', url: '/pesan', icon: 'chatbubbles' },
+    { title: 'User', url: '/user', icon: 'person' },
+    { title: 'Surat', url: '/suratkeluar', icon: 'mail' },
+    { title: 'Uang Keluar', url: '/uangkeluar', icon: 'wallet' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor(
+    private storage : Storage,
+    private platform: Platform,
+    private router : Router
+    
+  ) {
+    this.initializeApp();
+  }
+  async initializeApp() {
+    await this.storage.create();
+    this.platform.ready().then(() => {
+      // this.statusBar.styleDefault(); // Uncomment if you have StatusBar
+    });
+
+    this.storage.get('isLoggedIn').then((val) => {
+      if (val === null || val === undefined || val === '') {
+        this.router.navigateByUrl('/login'); // Navigasi ke halaman splash
+      } else {
+        this.router.navigateByUrl('/penduduk'); // Navigasi ke halaman tab1
+      }
+    });
+  }
 }
+

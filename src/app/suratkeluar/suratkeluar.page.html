@@ -1,0 +1,62 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title class="nama_apk">Greenland</ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      
+      <ion-button  (click)="logout()">
+        <ion-icon name="log-in-outline" style="color: rgba(6, 167, 73, 0.644); font-size: 27px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content  [fullscreen]="true">
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-button routerLink="/t-suratkeluar" expand="block" color="success">Tambah Data+</ion-button>
+    <div class="custom-button" (click)="exportToExcel()">
+      <ion-icon name="document-outline" class="custom-icon"></ion-icon>
+      <span class="button-text"></span>
+    </div>
+   
+    <ion-card class="table-card" *ngFor="let data of suratData">
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label slot="start">Kode surat:</ion-label>
+            <ion-label>{{ data.kd_surat_keluar }}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label slot="start">Kode penduduk:</ion-label>
+            <ion-label>{{ data.kd_penduduk }}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label slot="start">Nomor surat:</ion-label>
+            <ion-label>{{ data.nomor_surat }}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label slot="start">Keterangan:</ion-label>
+            <ion-label>{{ data.keterangan }}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label slot="start">Tanggal:</ion-label>
+            <ion-label>{{ data.tanggal_surat }}</ion-label>
+          </ion-item>
+        </ion-list>
+  
+        <ion-button color="success" (click)="edit(data.kd_surat_keluar)">
+          <ion-icon slot="start" name="create-outline"></ion-icon>
+          Update
+        </ion-button>
+        <ion-button color="danger" (click)="confirmDelete(data.kd_surat_keluar)">
+          <ion-icon slot="end" name="trash-outline"></ion-icon>
+          Delete
+        </ion-button>      
+      </ion-card-content>
+    </ion-card>
+</ion-content>

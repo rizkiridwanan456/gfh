@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,700&family=Sacramento&family=Tangerine:wght@400;700&family=Work+Sans:wght@100;400;600&display=swap");
+
+ion-header {
+  ion-menu-button {
+    color: var(--ion-color-success);
+  }
+
+  ion-toolbar,
+  ion-item {
+    --background: white;
+    background: white;
+    padding: 0 10px;
+  }
+  .nama_apk {
+    font-size: 16px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+  ion-toolbar {
+    .bordered {
+      --border-radius: 10px;
+      --box-shadow: 5px 5px 10px #ffff, -5px -5px 10px #ffffff;
+    }
+  }
+
+  ion-item {
+    h3 {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    ion-avatar {
+      --border-radius: 40%;
+    }
+  }
+}
+ion-content {
+  font-family: "Poppins", sans-serif;
+  --background: url("/assets/image/bg-5.jpg") center center/cover;
+ 
+
+  .form-wrapper {
+    --background: var(--ion-color-success);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 20px;
+    padding: 15px 10px;
+
+    .InputContainer {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      padding-left: 15px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+    }
+
+    .input {
+      width: 170px;
+      height: 100%;
+      border: none;
+      outline: none;
+      font-size: 0.9em;
+      caret-color: rgb(255, 81, 0);
+    }
+
+    .labelforsearch {
+      cursor: text;
+      padding: 0px 12px;
+    }
+
+    .searchIcon {
+      width: 13px;
+      left: auto;
+    }
+
+    .border {
+      height: 40%;
+      width: 1.3px;
+      background-color: rgb(223, 223, 223);
+    }
+    h1 {
+      margin-top: 2%;
+      margin-bottom: 10px;
+      font-size: 32px;
+      font-weight: 700;
+      font-family: sans-serif;
+      color: #ffffff;
+    }
+    h3 {
+      color: #ffff;
+      font-weight: 600;
+    }
+
+    ion-button {
+      --background: #204431;
+      height: 48px;
+      --box-shadow: none;
+      text-transform: initial;
+      font-size: 16px;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+  }
+  .form {
+    --background: RGBA(235, 243, 232, 0.50);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    border-radius: 20px;
+    padding: 15px 10px;
+  }
+  .nik{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  h4{
+    margin-top: 7px;
+    font-size: 16px;
+  }
+  .edit{
+    border-radius: 25%;
+    
+  }
+}

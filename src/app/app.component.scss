@@ -1,5 +1,8 @@
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(
+    --ion-item-background,
+    var(--ion-background-color, #204431)
+  );
 }
 
 ion-menu.md ion-content {
@@ -50,15 +53,20 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  --background: #ffff;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-success);
+}
+ion-menu.md ion-item.selected ion-label {
+  color: var(--ion-color-success);
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: #ffff;
 }
 
 ion-menu.md ion-item ion-label {
@@ -85,12 +93,12 @@ ion-menu.ios ion-item {
 }
 
 ion-menu.ios ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-success);
 }
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: #fff;
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {
@@ -115,5 +123,49 @@ ion-note {
 }
 
 ion-item.selected {
-  --color: var(--ion-color-primary);
+  --color: var(--ion-color-success);
+}
+.menu-header-bg {
+  height: 180px;
+  width: 350px;
+  background-color: #a2c579;
+  background: linear-gradient(90deg, var(--ion-color-success) 0%, #fff 100%);
+  box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+  transform: rotate(-15deg);
+  border-radius: 10px 10px 10px 50px;
+  margin-left: -18px;
+  margin-top: -58px;
+
+  margin-bottom: 60px;
+}
+.header-containt {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 7px solid #757575;
+    margin-right: 14px;
+  }
+  h2 {
+    font-weight: 300;
+    color: #fff;
+    font-family: sans-serif;
+  }
+}
+#inbox-list {
+  background: #12d36c;
+}
+ion-item {
+  --background: #12d36c;
+  ion-label {
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+  }
+  
 }

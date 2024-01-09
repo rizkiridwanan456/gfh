@@ -1,0 +1,28 @@
+
+<ion-content>
+  <div>
+    <div>
+      <img src="assets/green.png" >
+    </div>
+    <div class="title">
+      <h3>Login</h3>
+    </div>
+    <ion-item class="wrap-input">
+      <ion-input [(ngModel)]="username" type="text" placeholder="Masukan Username...."></ion-input>
+    </ion-item>
+    <ion-item class="wrap-input">
+      <ion-input [(ngModel)]="password" type="text" placeholder="Masukan Password...."></ion-input>
+    </ion-item>
+    <div class="mt-4 mx-2 d-flex justify-content-center">
+      <div class="text-white" style="font-size: 15x;">
+       Belum Punya Akun ?
+        <span (click)="register()" class="text-primary border-bottom border-primary" style="font-weight: bold; " >Daftar</span>
+      </div>
+      
+    </div>
+    <div class="container-form-btn">
+      <button (click)="login()" class="form-btn custom-font"><b>LOGIN</b></button>
+    </div>
+  </div>
+    </ion-content>
+    

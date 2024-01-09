@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true">
+  <div class="nav">
+    <ion-icon name="arrow-back-outline" [routerLink]="['/pesan']"></ion-icon>
+    <ion-title class="profile">Edit Pesan</ion-title>
+  </div>
+
+  <div class="container d-block justify-content-center py-3">
+    <ion-title class="edit">Kode Pesan :</ion-title>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="kd_pesan" readonly></ion-input>
+    </ion-item>
+
+    <ion-title class="edit">Kode Penduduk :</ion-title>
+    <ion-item>
+      <ion-input type="text"  [(ngModel)]="kd_penduduk" readonly></ion-input>
+    </ion-item>
+
+    <ion-title class="edit">Pesan :</ion-title>
+    <ion-item>
+      <ion-textarea placeholder="Masukan pesan" [(ngModel)]="pesan" ></ion-textarea>
+    </ion-item>
+
+    <ion-title class="edit">Tanggal Pesan :</ion-title>
+    <ion-item>
+      <ion-input type="date" placeholder="Masukkan keterangan" [(ngModel)]="tgl_pesan"></ion-input>
+    </ion-item>
+
+    
+
+    <div class="form-group mt-3">
+      <ion-button (click)="updatePesan()">Edit Pesan</ion-button>
+    </div>
+  </div>
+</ion-content>

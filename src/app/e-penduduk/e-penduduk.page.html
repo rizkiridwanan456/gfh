@@ -1,0 +1,98 @@
+<ion-content [fullscreen]="true">
+  <div class="nav">
+    <ion-icon
+      name="arrow-back-outline"
+      [routerLink]="['/penduduk']"
+    ></ion-icon>
+    <ion-title class="profile">Edit Penduduk</ion-title>
+  </div>
+  <div class="container d-block justify-content-center py-3 rounded-circle">
+    <!-- <div class="d-flex justify-content-center py-2" *ngFor="let data of Data">
+      <img
+        src="{{data.foto}}"
+        class="rounded-circle w-75"
+      />
+    </div> -->
+    <ion-item>
+      <ion-label position="stacked">kode penduduk</ion-label>
+      <ion-input [(ngModel)]="kd" type="text" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">kode blok</ion-label>
+      <ion-input [(ngModel)]="kd_blok" type="text" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">NIK</ion-label>
+      <ion-input [(ngModel)]="nik" type="text" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Domisili</ion-label>
+      <ion-input [(ngModel)]="stts_nik" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">KK</ion-label>
+      <ion-input [(ngModel)]="kk" type="text" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nama</ion-label>
+      <ion-input [(ngModel)]="nama" type="text" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Tempat Lahir</ion-label>
+      <ion-input [(ngModel)]="tmpt_lhr" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Jenis Kelamin</ion-label>
+      <ion-input [(ngModel)]="jk" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Tanggal Lahir</ion-label>
+      <ion-input [(ngModel)]="tgl_lhr" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Agama</ion-label>
+      <ion-input [(ngModel)]="agama" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Status Perkawinan</ion-label>
+      <ion-input [(ngModel)]="stts_prkwn" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Status Keluarga</ion-label>
+      <ion-input [(ngModel)]="stts_klrg" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Status Kewarganegaraan</ion-label>
+      <ion-input [(ngModel)]="stts_kwngn" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Status Pekerjaan</ion-label>
+      <ion-input [(ngModel)]="stts_pkrjan" type="text"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-select [(ngModel)]="stts_kvlng" label="Status Kavling" placeholder="Status Kavling">
+          <ion-select-option value="Pemilik">Pemilik</ion-select-option>
+          <ion-select-option value="Kontrak">Kontrak</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label position="stacked">Tanggal Masuk</ion-label>
+      <ion-input [(ngModel)]="tgl_msk" type="date"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-select [(ngModel)]="stts_huni" label="Status Huni" placeholder="Status Huni">
+          <ion-select-option value="Aktif">Aktif</ion-select-option>
+          <ion-select-option value="Tidak Aktif">Tidak Aktif</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>  
+    <div class="form-group mt-3">
+      <button class="form-control btn" (click)="Update()" style="background: linear-gradient(to bottom, #00e51f, #005d2a); color:white;">
+        Update Data
+      </button>
+    </div>
+    </div>
+  </ion-content>

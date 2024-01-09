@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,700&family=Sacramento&family=Tangerine:wght@400;700&family=Work+Sans:wght@100;400;600&display=swap");
+
+ion-header {
+  ion-menu-button {
+    color: var(--ion-color-success);
+  }
+
+  ion-toolbar,
+  ion-item {
+    --background: white;
+    background: white;
+    padding: 0 10px;
+  }
+  .nama_apk {
+    font-size: 16px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+  ion-toolbar {
+    .bordered {
+      --border-radius: 10px;
+      --box-shadow: 5px 5px 10px #ffff, -5px -5px 10px #ffffff;
+    }
+  }
+
+  ion-item {
+    h3 {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    ion-avatar {
+      --border-radius: 40%;
+    }
+  }
+}
+ion-content{
+  --background: url("/assets/image/bg-5.jpg") center center/cover;
+  font-family: "Poppins"sans-serif;
+
+  .form {
+    --background: rgba(56, 203, 31, 0.09);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    top:8px;
+    border-radius: 15px;
+    padding: 15px 10px;
+  }
+  .name{
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .tgl{
+    margin-left: 70%;
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  .isi{
+    margin-top: 7px;
+    font-size: 16.2px;
+    bottom: 10px;
+  }
+  .edit{
+    border-radius: 25%;
+    
+  }
+}
